@@ -1,8 +1,8 @@
 package org.wecancodeit;
 
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import static org.hamcrest.Matchers.containsInAnyOrder;
 
 import java.util.Collection;
 
@@ -17,8 +17,8 @@ public class ReviewRepositoryTest {
 	@Resource
 	
 	private ReviewRepository underTest;
-	private Review reviewOne = new Review(1L, "review name", "description","review name", "description");
-	private Review reviewTwo = new Review(2L, "review name", "description", "review name", "description");
+	private Review reviewOne = new Review(1L, "review name", "description","image url", "content");
+	private Review reviewTwo = new Review(2L, "review name", "description", "image url", "content");
 	
 	@Test
 	public void ShouldFindReviewOneById() {

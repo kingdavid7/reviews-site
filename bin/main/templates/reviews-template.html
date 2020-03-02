@@ -2,7 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title> List of All available Reviews</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
 </head>
 <body>
 
@@ -11,14 +12,11 @@
 	</header>
 	
 	<main>
-		<h1></h1>
-			<ul th:each="review: ${reviewsModel}">
-				<a href="|/show-reviews/${review.id}|"><li th:text="${review.id}">1</li></a>
-				<li th:text="${review.title}">Title 1</li>
-				<li th:text="${review.content}">Test Content</li>
-			</ul>
-		
-	</main>
+			<ul>
+				<li th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}" th:text="${review.title}"></a></li>
+
+			</ul> 
+</main>
 
 	<footer>
 		<small>&copy; 2020 eReviews site </small>

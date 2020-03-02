@@ -4,16 +4,16 @@ public class Review {
 
 	private Long id;
 	private String title;
-	private String imageUrl;
-	private String reviewCategory;
+	private String image;
+	private String category;
 	private String content;
 	
-	public Review(Long id, String title, String imageUrl, String reviewCategory, String content) {
+	public Review(Long id, String title, String image, String category, String content) {
 		super();
 		this.id = id;
 		this.title = title;
-		this.imageUrl = imageUrl;
-		this.reviewCategory = reviewCategory;
+		this.image = image;
+		this.category = category;
 		this.content = content;
 	}
 
@@ -33,20 +33,20 @@ public class Review {
 		this.title = title;
 	}
 
-	public String getImageUrl() {
-		return imageUrl;
+	public String getImage() {
+		return image;
 	}
 
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setImage(String image) {
+		this.image = image;
 	}
 
-	public String getReviewCategory() {
-		return reviewCategory;
+	public String getCategory() {
+		return category;
 	}
 
-	public void setReviewCategory(String reviewCategory) {
-		this.reviewCategory = reviewCategory;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getContent() {

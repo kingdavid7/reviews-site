@@ -40,7 +40,6 @@ public class ReviewsControllerMockMvcTest {
 	private ReviewRepository reviewRepo;
 	
 	
-	
 	@Test
 	public void shouldGetStatusOfOkWhenNavigatingToAllReviews() throws Exception{
 		this.mockMvc.perform(get("/show-reviews")).andExpect(status().isOk())
